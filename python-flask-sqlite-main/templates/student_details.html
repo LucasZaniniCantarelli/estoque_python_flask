@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block title %}
+Student Details
+{% endblock %}
+{% block content %}
+    <h1>Student Details</h1>
+    {% if student %}
+    <table class="table table-bordered">
+        <tr>
+            <th>Name</th>
+            <td>{{ student.name }}</td>
+        </tr>
+        <tr>
+            <th>Address</th>
+            <td>{{ student.addr }}</td>
+        </tr>
+        <tr>
+            <th>City</th>
+            <td>{{ student.city }}</td>
+        </tr>
+        <tr>
+            <th>Zip</th>
+            <td>{{ student.zip }}</td>
+        </tr>
+    </table>
+    {% else %}
+    <p>No student found with that name.</p>
+    {% endif %}
+{% endblock %}
